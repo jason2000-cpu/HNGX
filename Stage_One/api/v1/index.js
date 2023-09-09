@@ -1,15 +1,16 @@
 const express = require('express');
-const db = require('./db.js')
+const getUser = require('./api.js');
 const app = express();
 
-const port = '3000';
+const port = process.env.PORT || 5000;
 
 app.get('/api/v1', (req, res) => {
-    res.send(db)
+    const response = getUser(req.query.slack_name, req.query.track);
+    res.send(JSON.stringify(response.message, null, 2))
   })
 
 app.listen(port, () => {
     console.log(`Server Up and Running on http://localhost:${port}/api/v1`);
-    console.log(db)
 })
+
 
