@@ -1,11 +1,11 @@
 const express = require('express');
-
+const db = require('./db.json')
 const app = express();
 
 const port = '3000';
 
 app.get('/api/v1', (req, res) => {
-    res.send("<h1>Hello, World!</h1>")
+    res.send(db)
   })
 
 app.listen(port, () => {
