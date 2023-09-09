@@ -4,7 +4,7 @@ const app = express();
 
 const port = process.env.PORT || 5000;
 
-app.get('/api/v1', (req, res) => {
+app.get('/api/', (req, res) => {
     const response = getUser(req.query.slack_name, req.query.track);
     res.send(JSON.stringify(response.message, null, 2))
   })
