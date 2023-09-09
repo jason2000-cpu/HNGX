@@ -7,7 +7,7 @@ const db = {
     current_day: week_days[current_time.getDay()],
     utc_time: current_time.toUTCString(),
     track: "Backend",
-    github_file_url: "https://github.com/jason2000-cpu/HNGX/blob/main/file_name.ext",
+    github_file_url: "https://github.com/jason2000-cpu/HNGX/blob/master/Stage_One/api/v1/index.js",
     github_repo_url: "https://github.com/jason2000-cpu/HNGX",
     status_code: 200
   
