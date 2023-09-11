@@ -37,7 +37,7 @@ app.get("/api/", (req, res) => {
     current_day: days[new Date().getDay()],
     utc_time: new Date().toISOString().replace(/\.\d+/, ""),
     track: track,
-    github_file_url: "https://github.com/jason2000-cpu/HNGX/blob/master/Stage_One/api/v1/index.js",
+    github_file_url: "https://github.com/jason2000-cpu/HNGX/blob/master/Stage_One/api/index.js",
     github_repo_url: "https://github.com/jason2000-cpu/HNGX",
     status_code: 200,
   });
