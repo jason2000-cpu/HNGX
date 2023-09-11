@@ -6,8 +6,7 @@ const port = process.env.PORT || 5000;
 
 app.get('/api/', (req, res) => {
     const response = getUser(req.query.slack_name, req.query.track);
-    console.log(req.query.slack_name, req.query.track)
-    res.send(JSON.stringify(response))
+    res.json(response);
   })
 
 app.listen(port, () => {
